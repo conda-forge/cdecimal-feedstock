@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 1002
   skip: True  # [py>30]
-  script: python setup.py install
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -34,7 +34,7 @@ test:
 
 about:
   home: http://www.bytereef.org/mpdecimal/index.html
-  license: BSD 2-Clause
+  license: BSD-2-Clause
   summary: 'Fast arbitrary precision correctly-rounded decimal floating point arithmetic.'
   license_family: BSD
   license_file: LICENSE.txt
